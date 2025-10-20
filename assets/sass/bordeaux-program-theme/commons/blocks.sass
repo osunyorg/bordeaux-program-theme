@@ -1,0 +1,20 @@
+
+.block.block-title
+    @include in-page-without-sidebar
+        &::after
+            content: ''
+            display: block
+            padding-bottom: $spacing-3
+            margin-bottom: pxToRem(35)
+            border-bottom: 1px solid $color-brown-4
+
+.block.block-chapter
+    @include in-page-without-sidebar
+        .chapter
+            gap: var(--grid-gutter)
+            .text
+                width: columns(8)
+                .rich-text
+                    @include h3
+            > figure
+                order: -1

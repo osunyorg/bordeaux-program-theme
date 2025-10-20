@@ -1,0 +1,108 @@
+// Ce style correspond à l'option graphique numéro 1
+
+@include media-breakpoint-up(desktop)
+    header.hero
+        overflow: hidden
+        &::after
+            background: var(--color-background)
+            content: ""
+            height: 10vw
+            position: absolute
+            left: 50%
+            bottom: 0
+            transform: rotate(-4deg) translateX(-50%) translateY(50%)
+            transform-origin: bottom left
+            width: 130%
+            z-index: 1
+        .content, .essential-container
+            position: relative
+            z-index: 2
+        .content
+            .hero-text
+                margin-top: 0
+                margin-bottom: $spacing-5
+        &.hero--with-image
+            .content
+                .hero-text, > figure
+                    width: columns(6) !important
+            figure
+                figcaption
+                    &:before, .credit
+                        background: none !important
+
+.hero
+    + .breadcrumb-container
+        background-color: var(--color-background)
+
+body.programs__section,
+body.diplomas__term
+    .hero
+        .essential-container
+            .essential
+                --color-text-alt: var(--color-text)
+                --border-color: var(--color-text)
+                max-width: 100%
+        .hero-logos
+            margin-top: 0
+            .logo
+                display: none !important
+    @include media-breakpoint-down(desktop)
+        .hero
+            .content
+                display: flex
+                flex-direction: column
+                .hero-logos
+                    margin-bottom: $spacing-3
+                    justify-content: center
+                > figure
+                    order: 3
+    @include media-breakpoint-up(desktop)
+        .hero
+            position: relative
+            padding-bottom: $spacing-5
+            .hero-text
+                margin-bottom: 0
+            .content
+                flex-wrap: wrap
+                row-gap: 0
+                figure, .hero-text 
+                    width: columns(6)
+            .hero-logos
+                order: 3
+                margin-top: $spacing-4
+                width: 100%
+                flex-direction: row
+                margin-left: auto
+                width: columns(4)
+                justify-content: end
+
+body.programs__section
+    .hero
+        .essential-container
+            > .container
+                padding-left: 0
+                padding-right: 0
+                width: auto
+    @include media-breakpoint-up(desktop)
+        .essential-container
+            width: columns(6)
+            > .container
+                flex-direction: column
+                width: auto
+                gap: var(--grid-gutter)
+                .buttons
+                    flex-direction: row
+                    justify-content: start
+                    > *
+                        --btn-min-width: 0
+                        min-width: 0
+
+body.diplomas__term
+    @include media-breakpoint-up(desktop)
+        .hero
+            .essential-container
+                .essential
+                    max-width: columns(4)
+                    margin-bottom: $spacing-5
+
+

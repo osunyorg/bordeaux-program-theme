@@ -1,0 +1,66 @@
+header#document-header 
+    .top-menu
+        background-color: $color-brown
+        ul
+            li
+                &:not(:last-child)
+                    border-right-color: $color-background
+                a
+                    color: $color-background
+    .menu
+        a,
+        span
+            &[aria-expanded]::after
+                display: inline-block
+        .nav-level-1
+            .dropdown-menu
+                &::after
+                    transform: rotate(3deg)
+        .nav-level-2
+            > li
+                > span,
+                > a
+                    @include h4
+
+footer#document-footer
+    .footer-iut
+        flex: 1
+        display: block !important
+    .footer-logo
+        flex: 1
+        width: 100%
+        display: flex
+        gap: var(--grid-gutter)
+        justify-content: space-between
+        padding-right: 0 !important
+        a
+            display: block
+            &:after
+                display: none
+            img
+                display: inline-block
+            &:last-child
+                text-align: right
+    @include media-breakpoint-down(desktop)
+        .footer-logo
+            flex-wrap: wrap
+            a:first-child
+                width: 100%
+                img
+                    height: auto
+            a:nth-child(1n + 2)
+                width: columns(6)
+                img
+                    height: $header-logo-height
+    @include media-breakpoint-up(desktop)
+        .footer-logo
+            a
+                width: columns(4)
+                &:nth-child(2)
+                    text-align: center
+                img
+                    max-width: 100%
+                    height: $header-logo-height-desktop
+
+.footer-site
+    display: none !important
