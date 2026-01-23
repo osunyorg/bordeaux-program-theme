@@ -1,0 +1,3 @@
+posts:
+  item:
+    federated: "Actualité de l'<span>{{ . }}</span>"
