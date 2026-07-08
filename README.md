@@ -5,7 +5,7 @@
 1. Importer le thème dans le site.
 
 ```bash
-git submodule add git@github.com:osunyorg/bordeaux-program-theme.git themes/osunyorg/bordeaux-program-theme
+git submodule add git@github.com:osunyorg/bordeaux-program-theme.git themes/bordeaux-program-theme
 ```
 
 2. Ajouter le plugin comme un thème dans `config/_default/config.yaml`.
