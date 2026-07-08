@@ -11,10 +11,7 @@ git submodule add git@github.com:osunyorg/bordeaux-program-theme.git themes/osun
 2. Ajouter le plugin comme un thème dans `config/_default/config.yaml`.
 
 ```yaml
-theme: 
-  - osunyorg/bordeaux-theme
-  - osunyorg/bordeaux-program-theme
-
+theme: bordeaux-program-theme
 ```
 
 ## Site 
