@@ -14,6 +14,14 @@ git submodule add git@github.com:osunyorg/bordeaux-program-theme.git themes/bord
 theme: bordeaux-program-theme
 ```
 
+3. Appel des styles et options dans `assets/sass/main.sass`
+
+```sass
+@import "_configuration"
+@import "bordeaux-program-theme/theme"
+@import "bordeaux-program-theme/options/classic"
+```
+
 ## Site 
 
 - https://mp.iut.u-bordeaux.fr/
